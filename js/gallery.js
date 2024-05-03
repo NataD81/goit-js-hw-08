@@ -101,13 +101,14 @@ const images = [
 		
 	};
 	// console.log(event.target);
-	const handleClickImage = event.target.closest(".gallery-image");
+	
+	const handleClickImage = event.target.dataset.source;
 	// console.log(handleClickImage);
     // console.log(window);
 	const instance = basicLightbox.create(`
-	<div class = "modal">
-	<img src = "${handleClickImage.img}" alt="${handleClickImage.img}" width="800" height="600">
-	</div>
+	
+	<img src = "${handleClickImage}" alt="${handleClickImage.alt}" width="800" height="600">
+	
 `);
 instance.show()
 }
