@@ -107,7 +107,7 @@ const images = [
     // console.log(window);
 	const instance = basicLightbox.create(`
 	
-	<img src = "${handleClickImage}" alt="${handleClickImage.alt}" width="800" height="600">
+	<img src = "${handleClickImage}" alt="${`${event.target.alt}`}" width="800" height="600">
 	
 `);
 instance.show()
